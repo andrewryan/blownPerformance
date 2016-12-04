@@ -25,7 +25,7 @@ section.left{
     left: 18%;
     width: 20%;
     margin: 0;
-    height: 100px;
+    height: 65%;
     padding: 1em;
     border: 1px solid gray;
 }
@@ -35,7 +35,7 @@ section.center{
     right: 40%;
     width: 20%;
     margin: 0;
-    height: 100px;
+    height: 65%;
     padding: 1em;
     border: 1px solid gray;
 }
@@ -45,13 +45,17 @@ section.right{
     right: 18%;
     width: 20%;
     margin: 0;
-    height: 100px;
+    height: 65%;
     padding: 1em;
     border: 1px solid gray;
 }
 footer{
     padding: 1em;
     text-align: right;
+}
+a.font{
+    font-size: 10px;
+    color: #121212;
 }
 
 /*
