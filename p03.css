@@ -1,1 +1,66 @@
 /*Created by Andrew Ryan*/
+aside.left{
+    float: left;
+    width: 130px;
+    margin: 0;
+    height: 500px;
+    border-right: 1px solid gray;
+    padding: 1em;
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX9452282.jpg");
+    background-repeat: repeat-y;
+}
+aside.right{
+    float: right;
+    width: 130px;
+    margin: 0;
+    height: 500px;
+    border-right: 1px solid gray;
+    padding: 1em;
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/thumb_COLOURBOX9452282.jpg");
+    background-repeat: repeat-y;
+}
+section.left{
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    width: 20%;
+    margin: 0;
+    height: 100px;
+    padding: 1em;
+    border: 1px solid gray;
+}
+section.center{
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 20%;
+    margin: 0;
+    height: 100px;
+    padding: 1em;
+    border: 1px solid gray;
+}
+section.right{
+    position: absolute;
+    top: 30%;
+    right: 18%;
+    width: 20%;
+    margin: 0;
+    height: 100px;
+    padding: 1em;
+    border: 1px solid gray;
+}
+footer{
+    padding: 1em;
+    text-align: right;
+}
+
+/*
+body{
+	position: relative;
+	top: 30px;
+	background-image: url("https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg");
+	background-size: 120%;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+*/
