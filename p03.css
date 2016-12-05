@@ -57,6 +57,26 @@ a.font{
     font-size: 10px;
     color: #121212;
 }
+p.desc{
+    position: absolute;
+    top: 65%;
+    right: 30%;
+    width: 40%;
+    margin: 0;
+    height: 30%;
+    padding: 1em;
+    border: 1px solid gray;
+}
+select.position{
+    position: absolute;
+    top: 40%;
+    right: 27%;
+}
+select.whipPosition{
+    position: absolute;
+    top: 40%;
+    right: 25%;
+}
 
 /*
 body{
