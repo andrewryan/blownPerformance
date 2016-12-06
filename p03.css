@@ -57,6 +57,13 @@ a.font{
     font-size: 10px;
     color: #121212;
 }
+a.home{
+    position: absolute;
+    top: 50px;
+    right: 135px;
+    font-size: 24px;
+    color: #E70C0C;
+}
 p.desc{
     position: absolute;
     top: 420px;

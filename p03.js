@@ -21,15 +21,32 @@ function getCookie(cname) {
     }
     return "";
 }
+
+var cartItems = [];
 function slpDropdown()
 {
-	alert("slp function");
+	location.assign("cart.html");
+    itemsOrdered();
 }
 function proDropdown()
 {
-	alert("pro function");
+	location.assign("cart.html");
 }
 function whipDropdown()
 {
-	alert("whip function");
+	location.assign("cart.html");
+}
+function itemsOrdered()
+{
+    var finish = getCookie("slpFinish");
+    var hose = getCookie("slpHose");
+    if(finish == "gloss black" || finish == "polished")
+    {
+        cartItems.push(finish);
+    }
+    if(hose == "black" || hose == "red")
+    {
+        cartItems.push(hose);
+    }
+    console.log("your finish array is " + cartItems);
 }
