@@ -67,21 +67,38 @@ p.desc{
     padding: 1em;
     border: 1px solid gray;
 }
-select.slpPosition{
+select.slpFinish{
+    position: absolute;
+    top: 200px;
+    right: 350px;
+}
+select.proFinish{
+    position: absolute;
+    top: 200px;
+    right: 365px;
+}
+select.whipFinish{
+    position: absolute;
+    top: 200px;
+    right: 325px;
+}
+
+select.slpHose{
     position: absolute;
     top: 250px;
-    right: 342px;
+    right: 350px;
 }
-select.proPosition{
+select.proHose{
     position: absolute;
     top: 250px;
-    right: 355px;
+    right: 365px;
 }
-select.whipPosition{
+select.whipHose{
     position: absolute;
     top: 250px;
-    right: 310px;
+    right: 325px;
 }
+
 input.slpCart{
     position: absolute;
     top: 360px;
