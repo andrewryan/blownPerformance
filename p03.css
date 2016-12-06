@@ -21,31 +21,31 @@ aside.right{
 }
 section.left{
     position: absolute;
-    top: 30%;
+    top: 195px;
     left: 18%;
     width: 20%;
     margin: 0;
-    height: 65%;
+    height: 425px;
     padding: 1em;
     border: 1px solid gray;
 }
 section.center{
     position: absolute;
-    top: 30%;
+    top: 195px;
     right: 40%;
     width: 20%;
     margin: 0;
-    height: 65%;
+    height: 425px;
     padding: 1em;
     border: 1px solid gray;
 }
 section.right{
     position: absolute;
-    top: 30%;
+    top: 195px;
     right: 18%;
     width: 20%;
     margin: 0;
-    height: 65%;
+    height: 425px;
     padding: 1em;
     border: 1px solid gray;
 }
@@ -59,43 +59,43 @@ a.font{
 }
 p.desc{
     position: absolute;
-    top: 65%;
+    top: 420px;
     right: 30%;
     width: 40%;
     margin: 0;
-    height: 30%;
+    height: 190px;
     padding: 1em;
     border: 1px solid gray;
 }
-select.position{
+select.slpPosition{
     position: absolute;
-    top: 40%;
-    right: 27%;
+    top: 250px;
+    right: 342px;
 }
 select.proPosition{
     position: absolute;
-    top: 40%;
-    right: 28%;
+    top: 250px;
+    right: 355px;
 }
 select.whipPosition{
     position: absolute;
-    top: 40%;
-    right: 25%;
+    top: 250px;
+    right: 310px;
 }
 input.slpCart{
     position: absolute;
-    top: 55%;
-    right: 28%;
+    top: 360px;
+    right: 360px;
 }
 input.proCart{
     position: absolute;
-    top: 57%;
-    right: 29%;
+    top: 370px;
+    right: 372px;
 }
 input.whipCart{
     position: absolute;
-    top: 57.5%;
-    right: 26%;
+    top: 374px;
+    right: 332px;
 }
 
 /*

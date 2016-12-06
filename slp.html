@@ -21,11 +21,17 @@
       <div>
         <img src="http://www.slponline.com/mm5/i/parts/92000A_2.jpg" alt="SLP Stage 1 Supercharger" 
             style="width:30%;height:30%;">
-            <select class="position">
+            <select class="slpPosition" onchange="setCookie('slpCookie', this.value, 10);">
               <option>Select Option</option>
-              <option>blank</option>
-              <option>blank</option>
+              <option value="blank">blank</option>
+              <option value="blank">blank</option>
             </select>
+            <!--
+          <select id="ThemeSelect" onchange="setCookie('theme', this.value, 365);">
+              <option value="zelda">Zelda</option>
+              <option value="smb2">SMB 2</option>
+          </select>
+        -->
             <input class="slpCart" type="button" onclick="slpDropdown();" value="Add to Cart">
             <br>
             <a class="font" href="http://www.slponline.com/mm5/i/parts/92000A_2.jpg">
