@@ -57,6 +57,8 @@ var cartItems = [];
 var slpPrice = 6795.95;
 var whipPrice = 7650.00;
 var proPrice = 5920.00;
+var finish = "";
+var hose = "";
 function itemsOrdered(whatPage)
 {
     alert("inside itemsOrdered")
@@ -72,19 +74,19 @@ function itemsOrdered(whatPage)
     {
         alert(whatPage + "inside slp page check")
 
-        var finish = getCookie("finish");
-        var hose = getCookie("hose");
+        finish = getCookie("finish");
+        hose = getCookie("hose");
         alert(getCookie("finish"))
         alert(getCookie("hose"))
-/*
+
         if(finish == "gloss black" || finish == "polished")
         {
             cartItems.push(finish);
         }
-        else if(hose == "black" || hose == "red")
+        if(hose == "black" || hose == "red")
         {
             cartItems.push(hose);
-        }*/
+        }
         
         if(finish == "polished")
         {
@@ -102,15 +104,55 @@ function itemsOrdered(whatPage)
             slpPrice += 90.00;
             alert(slpPrice)
         }
+        cartItems.push(slpPrice);
         alert(slpPrice + " slpPrice")
         whatPage++;
         alert(whatPage)
-        alert("before document.getElem " + finish + " " + " " + hose + " " + slpPrice)
-        document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
-        alert("after document.getElem " + finish + " " + " " + hose + " " + slpPrice)
+        alert("before function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
+        //printToCart(finish, hose, slpPrice)
+        /* this is not working because cart page is using onclick and this is done before that so it has nothing to write to */
+        //document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
+        alert("after function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
+        alert(cartItems[0] + " " + cartItems[1] + " " + cartItems[2])
         //whatPage++;
         //alert(whatPage)
     }
     //else
         //alert("else statement");
 }
+function printToCart()
+{
+    alert("inside print to cart")
+    alert(cartItems[0] + " " + cartItems[1] + " " + cartItems[2])
+    //alert(finish + " inside print to cart")
+    //alert(hose + " inside print to cart")
+    //alert(price + " inside print to cart")
+    for(var i = 0; i < cartItems.length; i++)
+    {
+        alert("inside for loop")
+        document.getElementById("items").innerHTML = cartItems[i];
+        //displayItem(arrayCookie[i]);
+    }
+    //document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
+}
+/*
+var savedList = "";
+function saveList()
+{
+    savedList = cartItems.toString();
+    console.log(savedList + " = savedList");
+    setCookie("list", savedList, 1);
+}
+
+function loadCookieList()
+{
+    var cookieList = getCookie("list");
+    var arrayCookie = [];
+    var arrayCookie = cookieList.split(",");
+    //console.log("loadCookieList = " + arrayCookie);
+    for(var i = 0; i < arrayCookie.length; i++)
+    {
+        displayItem(arrayCookie[i]);
+    }
+}
+*/
