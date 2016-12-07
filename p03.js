@@ -21,32 +21,57 @@ function getCookie(cname) {
     }
     return "";
 }
-
-var cartItems = [];
 function slpDropdown()
 {
 	location.assign("cart.html");
-    itemsOrdered();
+    return true;
 }
 function proDropdown()
 {
 	location.assign("cart.html");
+    return 2;
 }
 function whipDropdown()
 {
 	location.assign("cart.html");
+    return 3;
 }
+/*
+var partsList = "";
+function itemList()
+{
+    partsList = cartItems.toString();
+    console.log(partsList + " = partsList variable");
+    setCookie("partslist", partsList, 10);
+}
+*/
+
+var cartItems = [];
+var slpPrice = 6795.95;
+var whipPrice = 7650.00;
+var proPrice = 5920.00;
 function itemsOrdered()
 {
-    var finish = getCookie("slpFinish");
-    var hose = getCookie("slpHose");
-    if(finish == "gloss black" || finish == "polished")
+    if(slpDropdown() == true)
     {
-        cartItems.push(finish);
+        var finish = getCookie("slpFinish");
+        var hose = getCookie("slpHose");
+        if(finish == "gloss black" || finish == "polished")
+        {
+            cartItems.push(finish);
+        }
+        if(hose == "black" || hose == "red")
+        {
+            cartItems.push(hose);
+        }
+        if(finish == "polished")
+        {
+            slpPrice += 175.00;
+        }
+        if(hose == "red")
+        {
+            slpPrice += 90.00;
+        }
+        document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
     }
-    if(hose == "black" || hose == "red")
-    {
-        cartItems.push(hose);
-    }
-    console.log("your finish array is " + cartItems);
 }
