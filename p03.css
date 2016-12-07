@@ -106,17 +106,17 @@ select.whipHose{
     right: 325px;
 }
 
-input.slpCart{
+button.slpCart{
     position: absolute;
     top: 360px;
     right: 360px;
 }
-input.proCart{
+button.proCart{
     position: absolute;
     top: 370px;
     right: 372px;
 }
-input.whipCart{
+button.whipCart{
     position: absolute;
     top: 374px;
     right: 332px;

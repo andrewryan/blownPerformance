@@ -21,57 +21,68 @@ function getCookie(cname) {
     }
     return "";
 }
+
+var cartItems = [];
+//var whatPage = 0;
 function slpDropdown()
 {
-	location.assign("cart.html");
-    return true;
+    alert(getCookie("finish"));
+    alert(getCookie("hose"));
+    var whatPage = 1;
+	//location.assign("cart.html");
+    //itemsOrdered(whatPage);
+    
+    var finish = getCookie("finish");
+    var hose = getCookie("hose");
+    cartItems.push(finish);
+    cartItems.push(hose);
+    itemsOrdered(cartItems);
+    
 }
 function proDropdown()
 {
 	location.assign("cart.html");
-    return 2;
+    whatPage = 5;
 }
 function whipDropdown()
 {
 	location.assign("cart.html");
-    return 3;
+    whatPage = 10;
 }
-/*
-var partsList = "";
-function itemList()
-{
-    partsList = cartItems.toString();
-    console.log(partsList + " = partsList variable");
-    setCookie("partslist", partsList, 10);
-}
-*/
 
-var cartItems = [];
 var slpPrice = 6795.95;
 var whipPrice = 7650.00;
 var proPrice = 5920.00;
-function itemsOrdered()
+function itemsOrdered(cartItems)
 {
-    if(slpDropdown() == true)
-    {
-        var finish = getCookie("slpFinish");
-        var hose = getCookie("slpHose");
+    var finish = cartItems[0];
+    var hose = cartItems[1];
+    //alert(whatPage);
+    //for(var i = 0; i < 1; i++)
+    
+    //if(whatPage == 1)
+    //{
+        /*var finish = getCookie("finish");
+        var hose = getCookie("hose");
         if(finish == "gloss black" || finish == "polished")
         {
             cartItems.push(finish);
         }
-        if(hose == "black" || hose == "red")
+        else if(hose == "black" || hose == "red")
         {
             cartItems.push(hose);
         }
+        */
         if(finish == "polished")
         {
             slpPrice += 175.00;
         }
-        if(hose == "red")
+        else if(hose == "red")
         {
             slpPrice += 90.00;
         }
         document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
-    }
+        //whatPage++;
+    //}
+    //else if(proDropdown() == true)
 }
