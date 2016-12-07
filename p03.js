@@ -22,10 +22,15 @@ function getCookie(cname) {
     return "";
 }
 
-var cartItems = [];
-//var whatPage = 0;
-function slpDropdown()
+var whatPage = 0;
+function slpPage()
 {
+    alert("inside slpDropdown")
+    whatPage = whatPage + 5;
+    alert(whatPage + " slpPage funct")
+    itemsOrdered(whatPage);
+    //return 5;
+    /*
     alert(getCookie("finish"));
     alert(getCookie("hose"));
     var whatPage = 1;
@@ -37,33 +42,41 @@ function slpDropdown()
     cartItems.push(finish);
     cartItems.push(hose);
     itemsOrdered(cartItems);
+    */
     
 }
-function proDropdown()
+function proPage()
 {
-	location.assign("cart.html");
-    whatPage = 5;
+    return 10;
 }
-function whipDropdown()
+function whipPage()
 {
-	location.assign("cart.html");
-    whatPage = 10;
+    return 15;
 }
-
+var cartItems = [];
 var slpPrice = 6795.95;
 var whipPrice = 7650.00;
 var proPrice = 5920.00;
-function itemsOrdered(cartItems)
+function itemsOrdered(whatPage)
 {
-    var finish = cartItems[0];
-    var hose = cartItems[1];
+    alert("inside itemsOrdered")
+    //alert(whatPage + " itemsOrdered funct")
+    //var finish = cartItems[0];
+    //var hose = cartItems[1];
+    //var finish = getCookie("finish");
+    //var hose = getCookie("hose");
     //alert(whatPage);
     //for(var i = 0; i < 1; i++)
     
-    //if(whatPage == 1)
-    //{
-        /*var finish = getCookie("finish");
+    while(whatPage == 5)
+    {
+        alert(whatPage + "inside slp page check")
+
+        var finish = getCookie("finish");
         var hose = getCookie("hose");
+        alert(getCookie("finish"))
+        alert(getCookie("hose"))
+/*
         if(finish == "gloss black" || finish == "polished")
         {
             cartItems.push(finish);
@@ -71,18 +84,33 @@ function itemsOrdered(cartItems)
         else if(hose == "black" || hose == "red")
         {
             cartItems.push(hose);
-        }
-        */
+        }*/
+        
         if(finish == "polished")
         {
+            alert("inside check for finish")
+            alert(getCookie("finish"))
+            alert(getCookie("hose"))
             slpPrice += 175.00;
+            alert(slpPrice)
         }
-        else if(hose == "red")
+        if(hose == "red")
         {
+            alert("inside check for hose")
+            alert(getCookie("finish"))
+            alert(getCookie("hose"))
             slpPrice += 90.00;
+            alert(slpPrice)
         }
+        alert(slpPrice + " slpPrice")
+        whatPage++;
+        alert(whatPage)
+        alert("before document.getElem " + finish + " " + " " + hose + " " + slpPrice)
         document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
+        alert("after document.getElem " + finish + " " + " " + hose + " " + slpPrice)
         //whatPage++;
-    //}
-    //else if(proDropdown() == true)
+        //alert(whatPage)
+    }
+    //else
+        //alert("else statement");
 }
