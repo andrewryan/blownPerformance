@@ -82,14 +82,13 @@ select.slpFinish{
 select.proFinish{
     position: absolute;
     top: 200px;
-    right: 365px;
+    right: 325px;
 }
 select.whipFinish{
     position: absolute;
     top: 200px;
-    right: 325px;
+    right: 285px;
 }
-
 select.slpHose{
     position: absolute;
     top: 250px;
@@ -98,37 +97,46 @@ select.slpHose{
 select.proHose{
     position: absolute;
     top: 250px;
-    right: 365px;
+    right: 360px;
 }
 select.whipHose{
     position: absolute;
     top: 250px;
-    right: 335px;
+    right: 312px;
 }
-
 button.slpCart{
     position: absolute;
+    color: #ec2b2b;
     top: 360px;
     right: 375px;
 }
 button.proCart{
     position: absolute;
+    color: #ec2b2b;
     top: 370px;
     right: 385px;
 }
 button.whipCart{
     position: absolute;
+    color: #ec2b2b;
     top: 374px;
     right: 345px;
 }
-
-/*
-body{
-	position: relative;
-	top: 30px;
-	background-image: url("https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg");
-	background-size: 120%;
-	background-repeat: no-repeat;
-	text-align: center;
+button.slpEmpty{
+    position: absolute;
+    color: #ec2b2b;
+    top: 320px;
+    right: 365px;
 }
-*/
+button.proEmpty{
+    position: absolute;
+    color: #ec2b2b;
+    top: 330px;
+    right: 375px;
+}
+button.whipEmpty{
+    position: absolute;
+    color: #ec2b2b;
+    top: 334px;
+    right: 335px;
+}

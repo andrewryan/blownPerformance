@@ -21,21 +21,44 @@ function getCookie(cname) {
     }
     return "";
 }
+function deleteCookie()
+{
+    setCookie('finish', finish, -1);
+    setCookie('hose', hose, -1);
+}
 var whatPage = 0;
 function slpPage()
 {
-    whatPage += 5;
-    itemsOrdered(whatPage);   
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    {
+        whatPage += 5;
+        itemsOrdered(whatPage);
+        location.assign("cart.html");
+    }
+    else
+        alert("Supercharger finish and hose coupling color must be selected.");
 }
 function proPage()
 {
-    whatPage += 10;
-    itemsOrdered(whatPage);
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    {
+        whatPage += 10;
+        itemsOrdered(whatPage);
+        location.assign("cart.html");
+    }
+    else
+        alert("Supercharger finish and hose coupling color must be selected.");
 }
 function whipPage()
 {
-    whatPage += 15;
-    itemsOrdered(whatPage);
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    {
+        whatPage += 15;
+        itemsOrdered(whatPage);
+        location.assign("cart.html");
+    }
+    else
+        alert("Supercharger finish and hose coupling color must be selected.");
 }
 var cartItems = [];
 var slpPrice = 6795.95;
