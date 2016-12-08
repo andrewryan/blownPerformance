@@ -25,9 +25,9 @@ function getCookie(cname) {
 var whatPage = 0;
 function slpPage()
 {
-    alert("inside slpDropdown")
+    //alert("inside slpDropdown")
     whatPage = whatPage + 5;
-    alert(whatPage + " slpPage funct")
+    //alert(whatPage + " slpPage funct")
     itemsOrdered(whatPage);
     //return 5;
     /*
@@ -59,6 +59,7 @@ var whipPrice = 7650.00;
 var proPrice = 5920.00;
 var finish = "";
 var hose = "";
+var partsList = "";
 function itemsOrdered(whatPage)
 {
     alert("inside itemsOrdered")
@@ -72,12 +73,12 @@ function itemsOrdered(whatPage)
     
     while(whatPage == 5)
     {
-        alert(whatPage + "inside slp page check")
+        //alert(whatPage + "inside slp page check")
 
         finish = getCookie("finish");
         hose = getCookie("hose");
-        alert(getCookie("finish"))
-        alert(getCookie("hose"))
+        //alert(getCookie("finish"))
+        //alert(getCookie("hose"))
 
         if(finish == "gloss black" || finish == "polished")
         {
@@ -90,51 +91,97 @@ function itemsOrdered(whatPage)
         
         if(finish == "polished")
         {
-            alert("inside check for finish")
-            alert(getCookie("finish"))
-            alert(getCookie("hose"))
+            //alert("inside check for finish")
+            //alert(getCookie("finish"))
+            //alert(getCookie("hose"))
             slpPrice += 175.00;
-            alert(slpPrice)
+            //alert(slpPrice)
         }
         if(hose == "red")
         {
-            alert("inside check for hose")
-            alert(getCookie("finish"))
-            alert(getCookie("hose"))
+            //alert("inside check for hose")
+            //alert(getCookie("finish"))
+            //alert(getCookie("hose"))
             slpPrice += 90.00;
-            alert(slpPrice)
+            //alert(slpPrice)
         }
         cartItems.push(slpPrice);
-        alert(slpPrice + " slpPrice")
+        //alert(slpPrice + " slpPrice")
         whatPage++;
-        alert(whatPage)
-        alert("before function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
+        //alert(whatPage)
+        //alert("before function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
         //printToCart(finish, hose, slpPrice)
         /* this is not working because cart page is using onclick and this is done before that so it has nothing to write to */
         //document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
-        alert("after function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
+        //alert("after function call to printToCart " + finish + " " + " " + hose + " " + slpPrice)
         alert(cartItems[0] + " " + cartItems[1] + " " + cartItems[2])
+
+        partsList = cartItems.toString();
+        alert(partsList + " = partsList");
+        setCookie("list", partsList, 10);
         //whatPage++;
         //alert(whatPage)
     }
     //else
         //alert("else statement");
 }
+var newList = "";
 function printToCart()
 {
-    alert("inside print to cart")
-    alert(cartItems[0] + " " + cartItems[1] + " " + cartItems[2])
+    var orderList = getCookie("list");
+    alert(orderList + " orderList")
+    var printList = [];
+    printList = orderList.split(",");
+    document.getElementById("finishColor").innerHTML = "Your Supercharger finsh is " + printList[0] + ".";
+    document.getElementById("hoseColor").innerHTML = "Your hose coupling color is " + printList[1] + ".";
+    document.getElementById("subtotal").innerHTML = "Your subtotal is $" + printList[2] + ".";
+    var subtotal = 0.00;
+    var tax = 0.00;
+    var total = 0.00;
+    subtotal = Number(printList[2]);
+    var tax = subtotal * .075;
+    total = (subtotal + tax);
+    total = total.toFixed(2);
+    //total = total.toFixed(2);
+    document.getElementById("total").innerHTML = "Your total is $" + total + ".";
+    //alert(cartItems[0] + " " + cartItems[1] + " " + cartItems[2])
     //alert(finish + " inside print to cart")
     //alert(hose + " inside print to cart")
     //alert(price + " inside print to cart")
-    for(var i = 0; i < cartItems.length; i++)
+    /*
+    for(var i = 0; i < printList.length; i++)
     {
-        alert("inside for loop")
-        document.getElementById("items").innerHTML = cartItems[i];
+        //alert("inside for loop")
+        //document.getElementById("items").innerHTML = printList[i];
+        newList = newList + printList[i] + " ";
         //displayItem(arrayCookie[i]);
     }
-    //document.getElementById("items").innerHTML = finish + " " + hose + " $" + slpPrice;
+    //print(newList);
+    alert(newList + " = newList");
+    /*
+    if(newList.includes("gloss black") || newList.includes("polished"))
+    {
+
+    }
+    
+    document.getElementById("items").innerHTML = newList;
+    */
 }
+/*
+function print(newList)
+{
+    alert(newList + " =newList")
+    var printOut = [];
+    printOut = newList.split(",");
+    alert(printOut + " =printOut");
+    alert(printOut[0]);
+    alert(printOut[1]);
+    alert(printOut[2])
+    document.getElementById("items").innerHTML = "Your finish is " + printOut[0] + ". Your color is " + printOut[1] + 
+    ". Your total is $" + printOut[2];
+    //document.getElementById("items").innerHTML = newList;
+}
+*/
 /*
 var savedList = "";
 function saveList()
