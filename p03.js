@@ -29,7 +29,7 @@ function deleteCookie()
 var whatPage = 0;
 function slpPage()
 {
-    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") && (getCookie("finish") != "Finish Color") && (getCookie("hose") != "Hose Color") )
     {
         whatPage += 5;
         itemsOrdered(whatPage);
@@ -40,7 +40,7 @@ function slpPage()
 }
 function proPage()
 {
-    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") && (getCookie("finish") != "Finish Color") && (getCookie("hose") != "Hose Color") )
     {
         whatPage += 10;
         itemsOrdered(whatPage);
@@ -51,7 +51,7 @@ function proPage()
 }
 function whipPage()
 {
-    if( (getCookie("finish") != "") && (getCookie("hose") != "") )
+    if( (getCookie("finish") != "") && (getCookie("hose") != "") && (getCookie("finish") != "Finish Color") && (getCookie("hose") != "Hose Color") )
     {
         whatPage += 15;
         itemsOrdered(whatPage);
